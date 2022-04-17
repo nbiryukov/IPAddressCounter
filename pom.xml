@@ -50,7 +50,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>org.counter.Main</mainClass>
+                            <mainClass>org.counter.ipcounter.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

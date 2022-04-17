@@ -1,5 +1,6 @@
 package org.counter;
 
+import org.counter.ipcounter.Main;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
@@ -36,6 +37,18 @@ class MainTest {
         assertThrows(IllegalArgumentException.class, () -> Main.main(args));
     }
 
+    @Test
+    void testWrongFileName() {
+        String[] args = {pathToFile + "1", String.valueOf(batchSize)};
+        assertThrows(IllegalArgumentException.class, () -> Main.main(args));
+    }
+
+    @Test
+    void testWrongBatchSize() {
+        String[] args = {pathToFile + "1", String.valueOf(batchSize) + "a"};
+        assertThrows(IllegalArgumentException.class, () -> Main.main(args));
+    }
+
     long getUniqueIpInFile() throws IOException {
         File file = new File(pathToFile);
         String absolutePath = file.getAbsolutePath();
@@ -47,5 +60,4 @@ class MainTest {
         }
         return ips.size();
     }
-
 }

@@ -1,4 +1,4 @@
-package org.counter.reader;
+package org.counter.ipcounter.reader;
 
 import org.junit.jupiter.api.Test;
 

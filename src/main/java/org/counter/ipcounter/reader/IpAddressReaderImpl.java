@@ -1,4 +1,4 @@
-package org.counter.reader;
+package org.counter.ipcounter.reader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -44,7 +44,7 @@ public class IpAddressReaderImpl implements IpAddressFileReader {
      * @throws IOException
      */
     @Override
-    public List<String> readLines() throws IOException {
+    public synchronized List<String> readLines() throws IOException {
         List<String> lines = new ArrayList<>(batchSize);
         for (int i = 0; i < batchSize; i++) {
             String line = reader.readLine();

@@ -1,4 +1,4 @@
-package org.counter.counter;
+package org.counter.ipcounter.counter;
 
 import java.util.List;
 

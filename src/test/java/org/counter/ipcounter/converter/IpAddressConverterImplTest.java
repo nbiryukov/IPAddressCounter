@@ -1,4 +1,4 @@
-package org.counter.converter;
+package org.counter.ipcounter.converter;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package org.counter.reader;
+package org.counter.ipcounter.reader;
 
 import java.io.IOException;
 import java.util.List;
